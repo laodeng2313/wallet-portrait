@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wallet portrait</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%231c2822' width='32' height='32' rx='6'/%3E%3Ccircle cx='16' cy='13' r='5' fill='%23f3ecdf'/%3E%3Cpath d='M8 26c1.6-4 4.4-6 8-6s6.4 2 8 6' fill='none' stroke='%23f3ecdf' stroke-width='2'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,500&family=Outfit:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="sheet">
+      <aside class="rail">
+        <p class="kicker">Field notes · ETH mainnet</p>
+        <h1>Wallet portrait</h1>
+        <p class="rail-copy">
+          A readable sketch of one address: balance, a sample of activity, contracts we recognize, and a few heuristic tags.
+        </p>
+        <p class="rail-disclaimer">
+          Tags are public-data heuristics. They are not a risk score, not KYC/AML screening, and not financial advice.
+        </p>
+      </aside>
+      <section class="work">
+        <form id="form">
+          <label for="address">Address or ENS name</label>
+          <div class="entry">
+            <input
+              id="address"
+              name="address"
+              spellcheck="false"
+              autocomplete="off"
+              placeholder="0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
+              value="0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
+            />
+            <button type="submit">Compose</button>
+          </div>
+          <div class="examples">
+            <span>Try</span>
+            <button type="button" data-fill="0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045">vitalik.eth hex</button>
+            <button type="button" data-fill="vitalik.eth">vitalik.eth</button>
+          </div>
+          <p id="status" role="status"></p>
+        </form>
+        <article id="result" hidden></article>
+      </section>
+    </main>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
